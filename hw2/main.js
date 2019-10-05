@@ -171,10 +171,10 @@
   };
 
   for (let key in list) {
-    if (typeof list[key] === "number") {
-      list[key];
-    } else {
+    if (typeof list[key] === "string") {
       list[key] = list[key].toUpperCase();
+    } else {
+      list[key];
     }
   }
   console.log(list);
