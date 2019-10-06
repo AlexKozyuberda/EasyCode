@@ -93,9 +93,22 @@
 {
   // 1. На основе строки “i am in the easycode” сделать новую строку где первые буквы каждого слова будут в верхнем регистре. Использовать for или while.
 
+  // const stringOne = "i am in the easycode";
+  // const stringOneArray = stringOne.split(" ");
+  // const stringOneUppercase = [];
+
+  // for (let i = 0; i < stringOneArray.length; i++) {
+  //   let stringArrayWord = stringOneArray[i];
+
+  //   stringArrayWord =
+  //     stringArrayWord[0].toUpperCase() + stringArrayWord.slice(1);
+
+  //   stringOneUppercase.push(stringArrayWord);
+  // }
+  // console.log(stringOneUppercase.join(" "));
+
   const stringOne = "i am in the easycode";
   const stringOneArray = stringOne.split(" ");
-  const stringOneUppercase = [];
 
   for (let i = 0; i < stringOneArray.length; i++) {
     let stringArrayWord = stringOneArray[i];
@@ -103,9 +116,10 @@
     stringArrayWord =
       stringArrayWord[0].toUpperCase() + stringArrayWord.slice(1);
 
-    stringOneUppercase.push(stringArrayWord);
+    stringOneArray[i] = stringArrayWord;
   }
-  console.log(stringOneUppercase.join(" "));
+
+  console.log(stringOneArray.join(" "));
 
   //  2. Дана строка “tseb eht ma i”. Используя циклы, сделать строку-перевертыш (то есть последняя буква становится первой, предпоследняя - второй итд).
 
@@ -131,9 +145,22 @@
 
   // 4. На основе строки “JavaScript is a pretty good language” сделать новую строку, где каждое слово начинается с большой буквы, а пробелы удалены. Использовать for.
 
+  // const stringTwo = "JavaScript is a pretty good language";
+  // const stringTwoArray = stringTwo.split(" ");
+  // const stringTwoUppercase = [];
+
+  // for (let i = 0; i < stringTwoArray.length; i++) {
+  //   let stringArrayWord = stringTwoArray[i];
+
+  //   stringArrayWord =
+  //     stringArrayWord[0].toUpperCase() + stringArrayWord.slice(1);
+
+  //   stringTwoUppercase.push(stringArrayWord);
+  // }
+  // console.log(stringTwoUppercase.join(""));
+
   const stringTwo = "JavaScript is a pretty good language";
   const stringTwoArray = stringTwo.split(" ");
-  const stringTwoUppercase = [];
 
   for (let i = 0; i < stringTwoArray.length; i++) {
     let stringArrayWord = stringTwoArray[i];
@@ -141,9 +168,10 @@
     stringArrayWord =
       stringArrayWord[0].toUpperCase() + stringArrayWord.slice(1);
 
-    stringTwoUppercase.push(stringArrayWord);
+    stringTwoArray[i] = stringArrayWord;
   }
-  console.log(stringTwoUppercase.join(""));
+
+  console.log(stringTwoArray.join(""));
 
   // 5. Найти все нечетные числа в массиве от 1 до 15 включительно и вывести их в консоль. Массив [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] Использовать for of.
 
