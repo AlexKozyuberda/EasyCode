@@ -23,35 +23,45 @@
 
   // 2. Создать функцию, которая принимает строку и возвращает строку-перевертыш: reverseString(‘test’) // “tset”
 
+  // function reverseString(string) {
+  //   let i = string.length;
+  //   let stringFlip = "";
+
+  //   while (i--) {
+  //     stringFlip += string[i];
+  //   }
+
+  //   return stringFlip;
+  // }
+
   function reverseString(string) {
-    let i = string.length;
-    let stringFlip = "";
-
-    while (i--) {
-      stringFlip += string[i];
-    }
-
-    return stringFlip;
+    return string.split("").reverse().join("")
   }
 
   console.log(reverseString("test"));
 
   // 3. Создать функцию, которая в качестве аргумента принимает строку из букв и возвращает строку, где каждый символ разделен пробелом и заменен на юникод-значение символа: getCodeStringFromText(‘hello’) // “104 101 108 108 111”
 
+  // function getCodeStringFromText(string) {
+  //   let stringCode = "";
+
+  //   for (let i = 0; i < string.length; i++) {
+  //     const space = " ";
+
+  //     if (i === 0) {
+  //       stringCode += string.charCodeAt(i);
+  //     } else {
+  //       stringCode += space + string.charCodeAt(i);
+  //     }
+  //   }
+
+  //   return stringCode;
+  // }
+
   function getCodeStringFromText(string) {
-    let stringCode = "";
-
-    for (let i = 0; i < string.length; i++) {
-      const space = " ";
-
-      if (i === 0) {
-        stringCode += string.charCodeAt(i);
-      } else {
-        stringCode += space + string.charCodeAt(i);
-      }
-    }
-
-    return stringCode;
+    return string.split("").map((char) => [
+      char.charCodeAt(0)
+    ]).join(" ");
   }
 
   console.log(getCodeStringFromText("hello"));
@@ -106,9 +116,7 @@
     const argumentsLength = argumentsArray.length;
 
     for (let i = 0; i < argumentsLength; i++) {
-      let numberArray = argumentsArray[i];
-
-      numberArray = numberArray.shift();
+      argumentsArray[i].shift();
     }
 
     return argumentsArray;
@@ -126,16 +134,18 @@
     { name: "Kate", age: 20, gender: "female" }
   ];
 
-  // const getUserGender = users.filter(item => item.gender === "male");
-  // console.log(getUserGender);
+  // function funcGetUsers(usersArray, gender, male) {
+  //   const users = [];
+  //   for (let i = 0; i < usersArray.length; i++) {
+  //     if (usersArray[i][gender] && usersArray[i][gender] === male) {
+  //       users.push(usersArray[i]);
+  //     }
+  //   }
+  //   return users;
+  // }
 
   function funcGetUsers(usersArray, gender, male) {
-    const users = [];
-    for (let i = 0; i < usersArray.length; i++) {
-      if (usersArray[i][gender] && usersArray[i][gender] === male) {
-        users.push(usersArray[i]);
-      }
-    }
+    const users = usersArray.filter(item => item[gender] === male);
     return users;
   }
 
