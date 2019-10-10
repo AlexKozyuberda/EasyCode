@@ -4,33 +4,43 @@
   // 1. На основе массива [1,2,3,5,8,9,10] сформировать новый массив, каждый элемент которого будет хранить информацию о числе и его четности: [{digit: 1, odd: true}, {digit: 2, odd: false}, {digit: 3, odd: true}...]
 
   const arrayNumber = [1, 2, 3, 5, 8, 9, 10];
-  const parityOfNumber = arrayNumber.map(element => {
-    if (element % 2) {
-      return { digit: element, odd: false };
-    } else {
-      return { digit: element, odd: true };
-    }
-  });
 
-  console.log(parityOfNumber);
+  function parityOfNumberFunction(array) {
+    const parityOfNumber = array.map(element => {
+      if (element % 2) {
+        return { digit: element, odd: false };
+      } else {
+        return { digit: element, odd: true };
+      }
+    });
+    return parityOfNumber;
+  }
+
+  console.log(parityOfNumberFunction(arrayNumber));
 
   // 2. Проверить, содержит ли массив [12, 4, 50, 1, 0, 18, 40] элементы, равные нулю. Если да - вернуть false.
 
-  const arrayEqualsZero = [12, 4, 50, 0, 6, 18, 40];
+  const arrayZero = [12, 4, 50, 1, 6, 18, 0];
 
-  const arrayEqualsZeroResult = arrayEqualsZero.every(element => {
-    return element === 0 ? false : true;
-  });
-  console.log(arrayEqualsZeroResult);
+  function arrayEqualsZeroFunction(array) {
+    return array.every(element => {
+      return element === 0 ? false : true;
+    });
+  }
+
+  console.log(arrayEqualsZeroFunction(arrayZero));
 
   // 3. Проверить, содержит ли массив ['yes', 'hello', 'no', 'easycode', 'what'] хотя бы одно слово длиной больше 3х букв. Если да - вернуть true
 
   const arrayString = ["yes", "hello", "no", "easycode", "what"];
-  const arrayStringResult = arrayString.some(element => {
-    return element.length === 3;
-  });
 
-  console.log(arrayStringResult);
+  function getArrayString(array) {
+    return array.some(element => {
+      return element.length === 3;
+    });
+  }
+
+  console.log(getArrayString(arrayString));
 
   // 4. Дан массив объектов, где каждый объект содержит информацию о букве и месте её положения в строке {буква: “a”, позиция_в_предложении: 1}:
 
@@ -57,15 +67,17 @@
     { char: "e", index: 7 }
   ];
 
-  arrayLetters.sort((element1, element2) => {
-    return element1.index - element2.index;
-  });
+  function sentence(array) {
+    return array
+      .sort((element1, element2) => {
+        return element1.index - element2.index;
+      })
+      .reduce((acc, currentValue) => {
+        return acc + currentValue.char;
+      }, "");
+  }
 
-  const arrayLettersResult = arrayLetters.reduce((acc, currentValue) => {
-    return acc + currentValue.char;
-  }, "");
-
-  console.log(arrayLettersResult);
+  console.log(sentence(arrayLetters));
 }
 
 // Занятие 5, Слайд 10, 11
@@ -73,13 +85,15 @@
 {
   // 1. Отсортируйте массив массивов так, чтобы вначале располагались наименьшие массивы (размер массива определяется его длиной): [ [14, 45], [1], ['a', 'c', 'd'] ] → [ [1], [14, 45], ['a', 'c', 'd']]
 
-  const array = [[14, 45], [1], ["a", "c", "d"]];
+  const arrayOfArrays = [[14, 45], [1], ["a", "c", "d"]];
 
-  array.sort((element1, element2) => {
-    return element1.length - element2.length;
-  });
+  function sort(array) {
+    return array.sort((element1, element2) => {
+      return element1.length - element2.length;
+    });
+  }
 
-  console.log(array);
+  console.log(sort(arrayOfArrays));
 
   // 2. Есть массив объектов:
   // [
@@ -129,11 +143,13 @@
     }
   ];
 
-  arrayCPU.sort((core1, core2) => {
-    return core1.info.cores - core2.info.cores;
-  });
+  function arrayCPUFunction(array) {
+    return array.sort((core1, core2) => {
+      return core1.info.cores - core2.info.cores;
+    });
+  }
 
-  console.log(arrayCPU);
+  console.log(arrayCPUFunction(arrayCPU));
 
   //   3. Создать функцию, которая будет принимать массив продуктов и две цены. Функция должна вернуть все продукты, цена которых находится в указанном диапазоне, и сортировать от дешевых к дорогим:
   // let products = [
@@ -156,15 +172,13 @@
   ];
 
   function filterCollection(array, fromPrice, toPrice) {
-    const products = array
+    return array
       .filter(element => {
         return element.price >= fromPrice && element.price <= toPrice;
       })
       .sort((product1, product2) => {
         return product1.price - product2.price;
       });
-
-    return products;
   }
 
   console.log(filterCollection(products, 15, 30));
