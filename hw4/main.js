@@ -6,13 +6,11 @@
   const arrayNumber = [1, 2, 3, 5, 8, 9, 10];
 
   function parityOfNumberFunction(array) {
-    const parityOfNumber = array.map(element => {
-      if (element % 2) {
-        return { digit: element, odd: false };
-      } else {
-        return { digit: element, odd: true };
-      }
-    });
+    const parityOfNumber = array.map(element => ({
+      digit: element,
+      odd: !!(element % 2)
+    }));
+
     return parityOfNumber;
   }
 
@@ -24,7 +22,7 @@
 
   function arrayEqualsZeroFunction(array) {
     return array.every(element => {
-      return element === 0 ? false : true;
+      return element !== 0;
     });
   }
 
@@ -36,7 +34,7 @@
 
   function getArrayString(array) {
     return array.some(element => {
-      return element.length === 3;
+      return element.length > 3;
     });
   }
 
