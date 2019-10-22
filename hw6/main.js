@@ -48,16 +48,16 @@
   // false так ul НЕ является родительским элементом для mark
   // Функция принимает только DOM объекты.
 
-  const parentElement = document.querySelector("mark");
-  const element = document.getElementsByTagName("p");
+  const parentElement = document.getElementsByTagName("p");
+  const childElement = document.querySelector("mark");
 
   function isParent(parent, child) {
-    return parent.parentElement === child;
+    return parent.contains(child);
   }
 
   console.log(
     "Является ли первый элемент родителем для второго:",
-    isParent(parentElement, element[4])
+    isParent(parentElement[4], childElement)
   );
 
   // 2. Получить список всех ссылок, которые не находятся внутри списка ul
@@ -93,10 +93,10 @@
   // Если хоть одно из условий не совпадает, то форма не валидна.
 
   const authorizationForm = document.querySelector(".authorization");
-  const authorizationName = document.querySelector("#name");
-  const authorizationLogin = document.querySelector("#login");
-  const authorizationPass = document.querySelector("#pass");
-  const authorizationCheck = document.querySelector("#conditions");
+  const authorizationName = document.getElementById("names");
+  const authorizationLogin = document.getElementById("login");
+  const authorizationPass = document.getElementById("pass");
+  const authorizationCheck = document.getElementById("conditions");
 
   const сheckNumberCharacters = function(field) {
     let fieldValue = field.value;
