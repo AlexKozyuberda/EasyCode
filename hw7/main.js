@@ -8,19 +8,17 @@
 
   //   2. Создать функцию, которая принимает в качестве аргумента узел DOM и возвращает информацию (в виде объекта) о типе узла, об имени узла и о количестве дочерних узлов (если детей нет - 0).
 
-  const span = document.querySelector("span");
-
   function nodeInfo(node) {
     const nodeInfo = {
       typeNode: node.nodeType,
       nameNode: node.tagName,
-      numberOfChildNode: node.childNodes.length
+      numberOfChildNode: node.childElementCount
     };
 
     return nodeInfo;
   }
 
-  console.log(nodeInfo(span));
+  console.log(nodeInfo(paragraph));
 
   // 3. Получить массив, который состоит из текстового содержимого ссылок внутри списка: getTextFromUl(ul) ---> ["Link1", "Link2", "Link3"]
 
@@ -154,26 +152,25 @@
 
   // 5. Отсортировать li внутри списка в обратном порядке (по тексту внутри)
 
-  const itemList = document.querySelectorAll(".list a");
+  const outerList = document.querySelector(".list");
 
   function getSortList(list) {
     const listArray = [];
 
-    for (const value of list) {
-      listArray.push(value.textContent);
+    for (const value of list.children) {
+      listArray.push(value);
     }
-    listArray.sort();
+    listArray.reverse();
 
-    for (let i = 0; i < list.length; i++) {
-      let linkText = listArray[i];
-      list[i].textContent = linkText;
+    for (let i = 0; i < listArray.length; i++) {
+      outerList.insertAdjacentElement("beforeend", listArray[i]);
     }
   }
 
   const btnSort = document.querySelector(".btn-sort");
 
   btnSort.addEventListener("click", function() {
-    getSortList(itemList);
+    getSortList(list);
   });
 
   // 6. Дан массив пользователей, его можно скопировать отсюда из первой задачи, создать таблицу вида:
