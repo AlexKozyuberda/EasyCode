@@ -103,26 +103,25 @@ console.log(stringAction.getStringReverse());
 console.log("----Задание 4----");
 
 const calculator = (function() {
-  this.value = 0;
+  let value = 0;
 
   function setValue(number) {
-    this.value = number;
+    value = number;
     return this;
   }
 
   function getPlus(number) {
-    this.value += number;
+    value += number;
     return this;
   }
 
   function getMultiply(number) {
-    this.value *= number;
+    value *= number;
     return this;
   }
 
   function getResult() {
-    let result = Math.round(this.value);
-    return result;
+    return Math.round(value);
   }
 
   return {
@@ -136,7 +135,7 @@ const calculator = (function() {
 console.log(
   calculator
     .setValue(10)
-    .getPlus(5)
+    .getPlus(0.269)
     .getMultiply(2)
     .getResult()
 );
