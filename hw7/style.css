@@ -1,0 +1,71 @@
+.green {
+  background-color: greenyellow;
+}
+
+span:not(:last-child) {
+  display: block;
+  margin-bottom: 15px;
+}
+
+#link {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.btn-sort {
+  display: block;
+  margin-bottom: 30px;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #3b8ef3;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.btn-sort:hover,
+.btn-sort:active,
+.btn-sort:focus {
+  background-color: #136bd6;
+}
+
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-head th {
+  padding: 10px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  background-color: #dceefa;
+  border-bottom: 1px solid rgba(102, 120, 177, 0.4);
+}
+
+.table-body td {
+  padding: 10px 8px;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  background-color: #eff8fd;
+  border-bottom: 1px solid rgba(102, 120, 177, 0.1);
+}
+
+.table-footer td {
+  padding: 10px 8px;
+  font-size: 14px;
+  font-weight: normal;
+  color: black;
+  background-color: #eff8fd;
+  border-bottom: 1px solid rgba(102, 120, 177, 0.1);
+}
+
+.table-footer td span {
+  font-size: 16px;
+  font-weight: bold;
+  color: #3f6ad8;
+}
