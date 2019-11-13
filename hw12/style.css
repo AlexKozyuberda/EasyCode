@@ -1,0 +1,32 @@
+label {
+  display: block;
+}
+
+form {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.col {
+  float: none;
+}
+
+.card-author {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+  opacity: 0.7;
+}
+
+.card-publishe {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  font-style: italic;
+  opacity: 0.7;
+}
