@@ -73,21 +73,18 @@ function getAutocomplete() {
 
 	let amountLetters = inputValue.length;
 
-	const citiesForAutocomplete = arrayCities.filter(city => {
+	autocompleteList.innerHTML = '';
+	
+	arrayCities.filter(city => {
+		let autocompleteItem = `<li class="autocomplete-item">
+													<a href="#" class="autocomplete-link">${city}</a>
+												</li>`;
+												
 		for (let i = 0; i < amountLetters; i++) {
 			if (inputValue === city.slice(0, amountLetters)) {
-				return city;
-			}
+				return autocompleteList.insertAdjacentHTML('beforeend', autocompleteItem);
+			} 
 		}
-	});
-
-	autocompleteList.innerHTML = '';
-
-	citiesForAutocomplete.forEach(city => {
-		let autocompleteItem = `<li class="autocomplete-item">
-															<a href="#" class="autocomplete-link">${city}</a>
-														</li>`;
-		autocompleteList.insertAdjacentHTML('beforeend', autocompleteItem);
 	});
 }
 
