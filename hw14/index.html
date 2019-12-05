@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Whack a mole</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game" style="background-image: url(img/bg.jpg)">
+      <div class="game-header">
+        <div class="game-header-info">
+          <div class="game-header-item">
+            <span class="game-header-caption">Name:</span>
+            <strong class="game-header-name">Player</strong>
+          </div>
+          <div class="game-header-item">
+            <span class="game-header-caption">Score:</span>
+            <strong class="game-header-score">0</strong>
+          </div>
+        </div>
+        <button type="button" class="game-header-logout">
+          <svg
+            version="1.1"
+            id="logout"
+            xmlns="http://www.w3.org/2000/svg"
+            x="0"
+            y="0"
+            viewBox="0 0 75.7 80"
+            xml:space="preserve"
+          >
+            <path
+              d="M25.7 40c0 2.2 1 4 2.2 4 1.2 0 2.2-1.8 2.2-4s-1-4-2.2-4c-1.2 0-2.2 1.8-2.2 4z"
+              fill="#fff"
+            />
+            <path
+              class="st1"
+              d="M54 27.4V4.8c0-.6-.2-1.2-.7-1.6-.4-.4-1-.7-1.6-.7h-14V7h11.7v20.4H54zM37.8 72.9v4.5h14c.6 0 1.2-.2 1.6-.7.4-.4.7-1 .7-1.6v-26h-4.5v23.7H37.8z"
+            />
+            <path class="st1" d="M49.5 27.5h4.4v40.1h-4.4z" />
+            <g id="mole_1_">
+              <g id="Page-1">
+                <g id="mole" transform="translate(3.323 2.017)">
+                  <path
+                    id="Shape_1_"
+                    d="M60.2 18.4l-.1-.1c-2.4-2.4-8.7-7.6-16-4.6.3-2.5 0 0-.2-6.7 0 0-8.5-.1-5.6 8.8-16.9 20.9-28.3 24-16 35.8l2.2 2.2.3.4c.8.8 1.6 1.5 2.2 2.2 11.8 12.3 14.9.9 35.8-16 8.9 2.9 8.8-5.6 8.8-5.6-6.7-.2-4.2-.5-6.7-.2 3.3-7.5-2.5-14-4.7-16.2z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="#333"
+                  />
+                  <path
+                    d="M24.3 54.7l-.3-.4c-.9-1-1.6-1.6-2.2-2.2l-.6-.6c-8.7-8.7-4.5-13.2 4.7-22.8 3.2-3.4 7.3-7.7 11.6-13-.8-2.8-.7-5.1.5-6.7 1.9-2.6 5.7-2.6 5.8-2.6h.6V7c.1 3.3.2 4.3.3 4.8 0 .3.1.5 0 .8 6.5-2.1 12.1 1.8 15.2 4.7l.5.5.1.1c3 3 7.6 9 5.4 15.9h.8c.5.1 1.5.2 4.8.3h.6v.6c0 .2 0 3.9-2.6 5.8-1.6 1.2-3.9 1.4-6.7.5-5.4 4.4-9.6 8.4-13 11.6-9.8 9.3-14.3 13.6-23.4 4l-1.7-1.7-.4-.2zm.6-1.3l.2.2.2.2c1 .9 1.7 1.6 2.3 2.2 4.1 4.3 7 5.6 10.1 4.7 3.2-.9 6.6-4.2 11.4-8.8 3.5-3.3 7.8-7.5 13.4-11.9l.3-.2.3.1c2.5.8 4.5.7 5.8-.2 1.5-1.1 1.9-3.1 2-4.1-2.8-.1-3.8-.2-4.3-.3-.4-.1-.4-.1-1.6.1l-1.2.2.5-1.1c2.7-6.5-1.4-12.2-4.4-15.2l-.4-.4c-2.9-2.8-8.7-7.2-15.3-4.4l-1.1.5.2-1.2c.2-1.1.2-1.1.1-1.6s-.2-1.5-.3-4.3c-1 .1-3 .5-4.1 2-1 1.3-1.1 3.3-.2 5.8l.1.3-.2.3c-4.5 5.6-8.6 9.9-11.9 13.4C22.2 34.5 19 38 18 41.1c-.9 3.1.4 6.1 4.7 10.1.6.5 1.3 1.2 2.2 2.2z"
+                  />
+                  <path
+                    d="M40.4 61.5c-6.9 6.9-17.6 7.5-23.9 1.2s-5.7-17 1.2-23.9 17.6-7.5 23.9-1.2 5.7 17-1.2 23.9z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="#93939f"
+                  />
+                  <path
+                    d="M16.3 62.9c-6.4-6.4-5.8-17.3 1.2-24.3s18-7.6 24.3-1.2c6.4 6.4 5.8 17.3-1.2 24.3-7 7.1-18 7.6-24.3 1.2zm25-25c-6.1-6.1-16.7-5.6-23.5 1.2s-7.3 17.3-1.2 23.5c6.1 6.1 16.7 5.6 23.5-1.2s7.4-17.4 1.2-23.5z"
+                  />
+                  <path
+                    class="st4"
+                    d="M41.3 37.6c5.9 6.3 5.2 16.7-1.6 23.5-6.4 6.4-16 7.3-22.4 2.5 5 2.8 13.1.7 19.2-5.5 6.7-6.6 8.7-15.6 4.8-20.5z"
+                  />
+                  <path
+                    d="M41.4 37.4c-6.3-5.9-16.7-5.2-23.5 1.6-6.4 6.4-7.3 16-2.5 22.4-2.8-5-.7-13.1 5.5-19.2 6.7-6.7 15.6-8.7 20.5-4.8z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="#c1c1c8"
+                  />
+                  <path
+                    class="st6"
+                    d="M51.4 18.9c-2.8-2.8-7.7-2.5-11 .8s-3.6 8.2-.8 11c1.7 1.7 4 2.2 6.4 1.7-.5 2.3.1 4.7 1.7 6.4 2.8 2.8 7.7 2.5 11-.8s3.6-8.2.8-11c-1.7-1.7-4-2.2-6.4-1.7.5-2.4 0-4.7-1.7-6.4z"
+                  />
+                  <path
+                    d="M47.3 39.3c-1.6-1.6-2.3-3.7-2-6.1-2.3.2-4.5-.5-6.1-2-3.1-3.1-2.7-8.4.8-11.9s8.8-3.9 11.9-.8c1.6 1.6 2.3 3.7 2 6.1 2.3-.2 4.5.5 6.1 2 3.1 3.1 2.7 8.4-.8 11.9s-8.9 3.8-11.9.8zm-.5-7.7l-.2.9c-.5 2.2.1 4.4 1.6 5.8 2.6 2.6 7.1 2.2 10.1-.8s3.4-7.5.8-10.1c-1.5-1.5-3.6-2-5.8-1.6l-.9.2.2-.9c.5-2.2-.1-4.4-1.6-5.8-2.6-2.6-7.1-2.2-10.1.8s-3.4 7.5-.8 10.1c1.4 1.4 3.6 2 5.8 1.6l.9-.2z"
+                  />
+                  <path
+                    d="M61.5 30.1c-.3.4-.7.9-1.1 1.2-3.4 3.4-8.4 3.7-11.3.8-1.7-1.7-2.3-4.2-1.8-6.6-2.4.5-4.9-.1-6.6-1.8-.8-.8-1.4-1.9-1.7-3-2.3 3.3-2.3 7.5.2 10.1 1.7 1.7 4.2 2.3 6.6 1.8-.5 2.4.1 4.9 1.8 6.6 2.9 2.9 8 2.5 11.4-.8 2.3-2.3 3.2-5.5 2.5-8.3z"
+                    opacity=".337"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="#a5a5a5"
+                  />
+                  <g id="Group">
+                    <path
+                      class="st8"
+                      d="M-25.1-29.5c-.8.8-2.1.8-3 0-.8-.8-.8-2.1 0-3 .8-.8 2.1-.8 3 0 .8.9.8 2.2 0 3z"
+                      transform="translate(73.93 58.411)"
+                    />
+                    <path
+                      d="M-28.3-29.2c-1-1-1-2.5 0-3.5s2.5-1 3.5 0 1 2.5 0 3.5-2.5 1-3.5 0zm2.9-2.9c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4 1.7.7 2.4 0 .7-1.8 0-2.4z"
+                      transform="translate(73.93 58.411)"
+                    />
+                    <path
+                      class="st6"
+                      d="M-26.2-31.6c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0 .2.2.2.6 0 .8z"
+                      transform="translate(73.93 58.411)"
+                    />
+                  </g>
+                  <path
+                    class="st8"
+                    d="M-44.6-25.7c-.8.8-2.1.8-3 0-.8-.8-.8-2.1 0-3 .8-.8 2.1-.8 3 0s.8 2.2 0 3z"
+                    transform="translate(97.17 58.411)"
+                  />
+                  <path
+                    d="M-47.8-25.4c-1-1-1-2.5 0-3.5s2.5-1 3.5 0 1 2.5 0 3.5c-1 .9-2.5.9-3.5 0zm2.9-3c-.7-.7-1.7-.7-2.4 0s-.7 1.7 0 2.4 1.7.7 2.4 0 .7-1.7 0-2.4z"
+                    transform="translate(97.17 58.411)"
+                  />
+                  <path
+                    class="st6"
+                    d="M-45.7-27.9c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0 .2.3.2.6 0 .8z"
+                    transform="translate(97.17 58.411)"
+                  />
+                  <linearGradient
+                    id="SVGID_1_"
+                    gradientUnits="userSpaceOnUse"
+                    x1="-265.979"
+                    y1="283.908"
+                    x2="-265.736"
+                    y2="283.908"
+                    gradientTransform="rotate(45 -13585.452 3001.967) scale(22.8117 -30.8107)"
+                  >
+                    <stop offset="0" stop-color="#f1aac2" />
+                    <stop offset="1" stop-color="#e5638f" />
+                  </linearGradient>
+                  <path
+                    d="M41.9 8.1s-4.8.4-3.4 6.7c1.2 0 1.4 0 2.7.2l.5-.5c-.4-1.4.6-1.6 1-4.8l-.8-1.6z"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="url(#SVGID_1_)"
+                  />
+                  <path
+                    d="M38.4 15v-.1c-.5-2.2-.3-4 .6-5.2C40.1 8.1 41.8 8 41.9 8h.1l.9 1.7c-.2 1.6-.5 2.5-.8 3.2-.3.6-.4 1-.2 1.6v.1l-.6.6h-.1c-1.1-.2-1.4-.2-2.2-.2h-.6zm3.4-6.7c-.4.1-1.7.3-2.6 1.5-.8 1.1-1 2.8-.6 4.8h.3c.9 0 1.1 0 2.2.1l.3-.3c-.2-.7 0-1.1.2-1.7.2-.6.6-1.5.8-3l-.6-1.4z"
+                  />
+                  <g>
+                    <linearGradient
+                      id="SVGID_2_"
+                      gradientUnits="userSpaceOnUse"
+                      x1="-271.202"
+                      y1="283.925"
+                      x2="-271.445"
+                      y2="283.925"
+                      gradientTransform="rotate(45 -13667.3 3197.164) scale(22.8117 -30.8107)"
+                    >
+                      <stop offset="0" stop-color="#f1aac2" />
+                      <stop offset="1" stop-color="#e5638f" />
+                    </linearGradient>
+                    <path
+                      d="M70.6 37.1s-.4 4.8-6.7 3.4c0-1.2 0-1.4-.2-2.7l.5-.5c1.4.4 1.6-.6 4.8-1l1.6.8z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="url(#SVGID_2_)"
+                    />
+                    <path
+                      d="M63.8 40.6V40c0-.9 0-1.1-.1-2.3v-.1l.6-.6h.1c.6.2 1 0 1.6-.2.6-.3 1.5-.6 3.2-.8l1.7.9v.1c0 .1-.1 1.8-1.6 2.9-1.2.9-3 1.1-5.2.6l-.3.1zm.2-2.8c.1 1.1.1 1.4.1 2.2v.3c2.1.4 3.7.3 4.8-.6 1.2-.9 1.5-2.2 1.5-2.6l-1.4-.7c-1.6.2-2.4.5-3 .8-.6.3-1 .4-1.7.2l-.3.4z"
+                    />
+                  </g>
+                  <path
+                    class="st4"
+                    d="M39.4 36.5c5.9 6.3 5.2 16.7-1.6 23.5-6.4 6.4-16 7.3-22.4 2.5 5 2.8 13.1.7 19.2-5.5 6.8-6.6 8.7-15.6 4.8-20.5z"
+                  />
+                  <g>
+                    <linearGradient
+                      id="SVGID_3_"
+                      gradientUnits="userSpaceOnUse"
+                      x1="-272.509"
+                      y1="287.26"
+                      x2="-272.364"
+                      y2="287.096"
+                      gradientTransform="rotate(45 -33540.775 20766.171) scale(89.75 -61.4079)"
+                    >
+                      <stop offset="0" stop-color="#ffceae" />
+                      <stop offset="1" stop-color="#ffb280" />
+                    </linearGradient>
+                    <path
+                      d="M45.5 33.1c-1.9-1.9-4.4-2.6-6.5-2-2.2-1.2-4.2-1.5-5.1-.5-.3.3-.4.6-.5 1-.4.2-.7.4-1 .7-2.1 2.1-.6 7.1 3.4 11.1s9 5.6 11.1 3.4c.3-.3.6-.8.7-1.2.3-.1.6-.2.8-.5 1-1 .6-3.2-.9-5.8.6-1.9-.1-4.4-2-6.2z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="url(#SVGID_3_)"
+                    />
+                    <path
+                      d="M35.6 43.6c-4.1-4.1-5.7-9.3-3.4-11.6.3-.3.6-.5 1-.7.1-.4.3-.7.5-1 1-1 2.9-.8 5.4.4 2.2-.6 4.8.2 6.7 2.1 1.8 1.8 2.6 4.3 2.2 6.5 1.6 2.7 1.9 4.9.8 6-.2.2-.5.4-.8.5-.2.5-.4.9-.8 1.2-2.3 2.3-7.5.7-11.6-3.4zm9.7-10.3c-1.7-1.7-4.2-2.5-6.2-1.9H39l-.1-.1c-2.2-1.2-4-1.4-4.7-.6-.2.2-.3.5-.4.8v.2l-.2.1c-.4.1-.7.3-.9.6-2 2-.5 6.8 3.4 10.7 3.9 3.9 8.7 5.4 10.7 3.4.3-.3.5-.7.7-1.1l.1-.2h.2c.3-.1.5-.2.7-.4.9-.9.5-2.9-.9-5.4l-.1-.1v-.1c.3-1.9-.5-4.2-2.2-5.9z"
+                    />
+                  </g>
+                  <path
+                    class="st8"
+                    d="M46.9 37.1c-1.4 1.4-3.7 1.4-5.1 0s-1.4-3.7 0-5.1c1.4-1.4 3.7-1.4 5.1 0s1.4 3.6 0 5.1z"
+                  />
+                  <g>
+                    <linearGradient
+                      id="SVGID_4_"
+                      gradientUnits="userSpaceOnUse"
+                      x1="-266.857"
+                      y1="286.291"
+                      x2="-266.587"
+                      y2="286.291"
+                      gradientTransform="rotate(45 -11830.445 1918.865) scale(17.8781 -27.2428)"
+                    >
+                      <stop offset="0" stop-color="#8a8a8a" />
+                      <stop offset=".286" stop-color="#f1f1f1" />
+                      <stop offset="1" stop-color="#fff" />
+                    </linearGradient>
+                    <path
+                      d="M35.7 36.9l2.9 2.9-4.4 4.4-2.9-2.9 4.4-4.4z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="url(#SVGID_4_)"
+                    />
+                    <path
+                      d="M34.2 44.8l-3.4-3.4 4.9-4.9 3.4 3.4-4.9 4.9zm-2.5-3.5l2.4 2.4 3.9-3.9-2.4-2.4-3.9 3.9z"
+                    />
+                  </g>
+                  <g>
+                    <linearGradient
+                      id="SVGID_5_"
+                      gradientUnits="userSpaceOnUse"
+                      x1="-267.636"
+                      y1="286.277"
+                      x2="-267.366"
+                      y2="286.277"
+                      gradientTransform="rotate(45 -11838.876 1940.962) scale(17.8781 -27.2426)"
+                    >
+                      <stop offset="0" stop-color="#8a8a8a" />
+                      <stop offset=".286" stop-color="#f1f1f1" />
+                      <stop offset="1" stop-color="#fff" />
+                    </linearGradient>
+                    <path
+                      d="M38.7 39.8l2.9 2.9-4.4 4.4-2.9-2.9 4.4-4.4z"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      fill="url(#SVGID_5_)"
+                    />
+                    <path
+                      d="M37.2 47.6l-3.4-3.4 4.9-4.9 3.4 3.4-4.9 4.9zm-2.4-3.4l2.4 2.4 3.9-3.9-2.4-2.4-3.9 3.9z"
+                    />
+                  </g>
+                  <path
+                    d="M38 40.2c-1.9-1.9-3.3-4.4-4.2-7.4l1.2-.3c1.7 6.1 5.7 9.7 12 10.9l-.2 1.2c-3.6-.7-6.6-2.1-8.8-4.4z"
+                  />
+                </g>
+              </g>
+            </g>
+            <path
+              class="st1"
+              d="M2.6 2.7C1.1 2.8 0 4.1 0 5.6v66.2c0 1.4 1 2.6 2.4 2.8L32.5 80c.8.2 1.7-.1 2.4-.6.7-.6 1-1.4 1-2.2V2.9c0-.8-.3-1.6-.9-2.1-.6-.6-1.4-.8-2.2-.7L2.6 2.7zM28 44c-1.2 0-2.2-1.8-2.2-4s1-4 2.2-4c1.2 0 2.2 1.8 2.2 4s-1 4-2.2 4z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="game-content">
+        <div class="game-settings">
+          <div class="game-result">
+            <a href="#" class="game-result-btn">Result table</a>
+            <div class="game-result-modal">
+              <span class="game-result-caption">Result table</span>
+              <table class="game-result-table">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+              <button type="button" class="close game-result-close"></button>
+            </div>
+          </div>
+          <div class="game-level">
+            <span class="game-level-caption">Choose game level</span>
+            <select class="game-level-select">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <button class="game-start">Start game!</button>
+        </div>
+        <div class="game-hole">
+          <div class="hole hole1">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole2">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole3">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole4">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole5">
+            <div class="mole"></div>
+          </div>
+          <div class="hole hole6">
+            <div class="mole"></div>
+          </div>
+        </div>
+        <div class="game-finish-modal">
+          <strong class="game-finish-title">End of the game</strong>
+          <div class="game-finish-block">
+            <span class="game-finish-caption">Moles appeared</span>
+            <span class="game-finish-value value-appeared">0</span>
+          </div>
+          <div class="game-finish-block">
+            <span class="game-finish-caption">Amount moles</span>
+            <span class="game-finish-value value-moles">0</span>
+          </div>
+
+          <button type="button" class="close game-finish-close"></button>
+        </div>
+      </div>
+      <div class="game-intro">
+        <div class="game-intro-main">
+          <div class="game-intro-head">
+            <h1 class="game-intro-title">Whack a mole!</h1>
+          </div>
+          <form class="game-intro-form">
+            <label class="game-intro-user">
+              <span class="game-intro-caption">Enter your name:</span>
+              <input type="text" class="game-intro-input" />
+              <span class="error-message">Please enter your name!</span>
+            </label>
+            <button type="button" class="game-intro-btn">Enter</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
