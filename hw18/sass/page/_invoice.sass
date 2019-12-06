@@ -1,0 +1,275 @@
+.invoice
+  position: relative
+  padding: 50px
+  background-color: #f5f5f5
+
+.invoice-head
+  padding-left: 20px
+  border-left: 4px solid #dee2e6
+
+.invoice-title
+  display: flex
+  align-items: center
+  width: 100%
+  margin-bottom: 50px
+  font-size: 26px
+  line-height: 36px
+  font-weight: 500
+
+  &::after
+    content: ''
+    flex: 1
+    height: 1px
+    margin-left: 20px
+    background-color: #dee2e6
+
+.invoice-actions
+  margin-bottom: 40px
+
+.invoice-actions-caption
+  display: block
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: 500
+
+.invoice-btn
+  display: block
+  padding: .55rem 2rem
+  font-size: 14px
+  color: #dee2e6
+  background-color: #3c8dbc
+  border: none
+  border-radius: 3px
+  outline: none
+  cursor: pointer
+  transition: background-color .3s
+
+  &:hover
+    background-color: #367fa9
+
+.invoice-btn--right
+  margin-left: auto
+
+.invoice-table-caption
+  display: block
+  margin-bottom: 10px
+  font-size: 14px
+  font-weight: 500
+  text-align: left
+
+.invoice-table
+  width: 100%
+  table-layout: fixed
+  border-collapse: collapse
+
+  thead
+    background-color: #3c8dbc
+
+  th,
+  td
+    padding: 15px 20px
+    text-align: left
+    border-top: 1px solid #dee2e6
+
+  th
+    padding-top: 20px
+    padding-bottom: 20px
+    font-size: 16px
+    color: #ecf0f1
+    border-bottom: 1px solid #dee2e6
+
+  td
+    position: relative
+    font-size: 14px
+    background-color: #fbf8f8
+    border-bottom: 1px solid #dee2e6
+    transition: background-color .3s
+
+  tr
+    &:hover
+      td
+        background-color: rgba(245, 245, 245, .3)
+
+        .invoice-delete
+          opacity: 1
+
+.invoice-delete
+  position: absolute
+  top: 10px
+  right: 4px
+  width: 13px
+  height: 22px
+  padding: 0
+  background-color: transparent
+  border: none
+  outline: none
+  cursor: pointer
+  opacity: 0
+  transition: opacity .3s
+
+  &::before
+    content: '\00d7'
+    position: absolute
+    top: 0
+    left: 0
+    font-size: 22px
+    line-height: 22px
+    color: #3c8dbc
+    transition: color .3s
+
+  &:hover
+    &::before
+      color: #307fad
+
+.invoice-edit
+  position: absolute
+  right: 4px
+  bottom: 10px
+  width: 18px
+  height: 24px
+  padding: 0
+  background: transparent url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNjQiIGhlaWdodD0iNjQiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iI2ZmYjY0ZCI+PHBhdGggZD0iTTEwNi42MDc2NywyMS4wNTM4M2MtMS43MDg1NiwtMC4wNjE0MSAtMy40NDEyNiwwLjEyNjUgLTUuMTU0NTQsMC41ODAwMmMtNC41Njg3NSwxLjIwOTM3IC04LjMzMTc4LDQuMTY1MSAtMTAuNjE2MTUsOC4xOTYzNWwtNC44MzY5Nyw4LjczNDM4Yy0xLjA3NSwxLjg4MTI1IC0wLjQwMzY1LDQuNDM2NDcgMS40Nzc2LDUuNTExNDdsMjMuMjQ3OTMsMTMuNDM3NWMwLjY3MTg4LDAuNDAzMTIgMS4zNDM3NSwwLjUzNTQgMi4wMTU2MywwLjUzNTRjMC40MDMxMiwwIDAuNjcwMywwLjAwMDUyIDEuMDczNDMsLTAuMTMzODVjMS4wNzUsLTAuMjY4NzUgMS44ODIzLC0wLjk0MTE1IDIuNDE5OCwtMS44ODE3N2w0Ljk3MDgzLC04LjczNDM3YzIuMjg0MzcsLTQuMDMxMjUgMi45NTczLC04LjczMjI4IDEuNzQ3OTIsLTEzLjMwMTAzYy0xLjIwOTM4LC00LjU2ODc1IC00LjE2NTEsLTguMzMxNzcgLTguMTk2MzUsLTEwLjYxNjE1Yy0yLjUxOTUzLC0xLjQyNzczIC01LjMwMTUxLC0yLjIyNTU5IC04LjE0OTExLC0yLjMyNzk0ek04MC43NTYyMyw1MS4yMzMwOWMtMS4zMDE3NiwwLjA5OTczIC0yLjU1MTAyLDAuODAzMSAtMy4yMjI5LDEuOTc4ODhsLTQwLjU4MDIsNzAuNDEzMDNjLTQuNTY4NzUsNy43OTM3NSAtNy4xMjA4MywxNi41Mjg2NSAtNy42NTgzMywyNS4zOTc0bC0xLjA3NjA1LDE3LjMzNDljLTAuMTM0MzgsMS40NzgxMyAwLjY3MTg4LDIuOTU0NjggMi4wMTU2MywzLjc2MDkzYzAuNjcxODgsMC40MDMxMiAxLjM0Mzc1LDAuNTM4MDIgMi4wMTU2MywwLjUzODAyYzAuODA2MjUsMCAxLjYxMTQ1LC0wLjI2ODc1IDIuMjgzMzMsLTAuNjcxODdsMTQuNTEzNTUsLTkuNTQwMWM3LjM5MDYzLC00Ljk3MTg4IDEzLjcwNjI1LC0xMS41NTY3NyAxOC4xNDA2MywtMTkuMzUwNTJsNDAuNzE2NjcsLTcwLjQxMzAzYzEuMDc1LC0xLjg4MTI1IDAuNDAxMDMsLTQuNDMzODUgLTEuNDgwMjIsLTUuNTA4ODVjLTEuODgxMjUsLTEuMDc1IC00LjQzMzg1LC0wLjQwMzY1IC01LjUwODg1LDEuNDc3NmwtNDAuNzE0MDUsNzAuNDEzMDNjLTMuODk2ODcsNi41ODQzNyAtOS4yNzM0NSwxMi4zNjMwMiAtMTUuNzIzNDUsMTYuNjYzMDJsLTcuNzkyMTgsNS4xMDQ2OGwwLjUzNTQsLTkuMjY5NzhjMC40MDMxMywtNy42NTkzOCAyLjY4ODAyLC0xNS4xODU0MiA2LjU4NDksLTIxLjkwNDE3bDQwLjcxNjY4LC03MC40MTMwM2MxLjA3NSwtMS44ODEyNSAwLjQwMzY1LC00LjQzMzg1IC0xLjQ3NzYsLTUuNTA4ODVjLTAuNzA1NDcsLTAuNDAzMTIgLTEuNTA3NTIsLTAuNTYxMTIgLTIuMjg4NTcsLTAuNTAxMjh6TTY1Ljg0Mzc1LDE2Mi41OTM3NWMtMi4yODQzOCwwIC00LjAzMTI1LDEuNzQ2ODcgLTQuMDMxMjUsNC4wMzEyNWMwLDIuMjg0MzggMS43NDY4Nyw0LjAzMTI1IDQuMDMxMjUsNC4wMzEyNWg1My43NWMyLjI4NDM3LDAgNC4wMzEyNSwtMS43NDY4NyA0LjAzMTI1LC00LjAzMTI1YzAsLTIuMjg0MzggLTEuNzQ2ODgsLTQuMDMxMjUgLTQuMDMxMjUsLTQuMDMxMjV6TTEzOS43NSwxNjIuNTkzNzVjLTIuMjI2NCwwIC00LjAzMTI1LDEuODA0ODUgLTQuMDMxMjUsNC4wMzEyNWMwLDIuMjI2NCAxLjgwNDg1LDQuMDMxMjUgNC4wMzEyNSw0LjAzMTI1YzIuMjI2NCwwIDQuMDMxMjUsLTEuODA0ODUgNC4wMzEyNSwtNC4wMzEyNWMwLC0yLjIyNjQgLTEuODA0ODUsLTQuMDMxMjUgLTQuMDMxMjUsLTQuMDMxMjV6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4=')
+  background-size: 20px 100%
+  border: none
+  outline: none
+  cursor: pointer
+
+.invoice-modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 1000
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: rgba(60, 141, 188, .1)
+  opacity: 0
+  visibility: hidden
+  transition: opacity .3s 0s, visibility 0s .3s
+
+.invoice-modal-content
+  position: relative
+  width: 70rem
+  padding: 40px 30px
+  background-color: #f5f5f5
+  // transform: scale(0)
+  transition: transform .5s ease-in-out
+
+.show
+  opacity: 1
+  visibility: visible
+  transition: opacity .3s 0s, visibility 0s 0s
+
+  .invoice-modal-content
+    transform: scale(1)
+
+.invoice-form
+  padding: 30px
+  background-color: #fbf8f8
+
+.invoice-form-container
+  display: flex
+  flex-flow: row wrap
+  margin: 0 -10px 10px
+
+.invoice-form-group
+  width: calc( 50% -  20px)
+  margin: 10px
+
+  &:last-child
+    width: calc( 100% -  20px)
+
+.invoice-form-caption
+  display: block
+  margin-bottom: 12px
+  font-weight: 500
+
+.invoice-form-field
+  position: relative
+
+.error-message
+  position: absolute
+  top: 100%
+  right: 0
+  left: 0
+  opacity: 0
+  font-size: 12px
+  font-weight: 500
+  color: #ff5370
+  transition: top .3s, opacity .3s
+
+.error-show
+  top: calc( 100% + 2px )
+  opacity: 1
+
+.invoice-form-icon
+  position: absolute
+  top: 1px
+  right: 1px
+  bottom: 1px
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 50px
+  background-color: #f5f5f5
+  border-left: 1px solid #dee2e6
+
+.invoice-form-input
+  width: 100%
+  height: 40px
+  padding: 0 60px 0 20px
+  color: #73879C
+  background-color: transparent
+  border: 1px solid #dee2e6
+  border-radius: 3px
+  outline: none
+
+  &::placeholder
+    color: #73879C
+
+  &:focus
+    border-color: rgba(60, 141, 188, .5)
+
+[type="date"]
+  padding-right: 10px
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCAxNzIgMTcyIgpzdHlsZT0iIGZpbGw6IzAwMDAwMDsiPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0iIzczODc5YyI+PHBhdGggZD0iTTQxLjI4LDBjLTMuNzYyNSwwIC02Ljg4LDMuMTE3NSAtNi44OCw2Ljg4djYuODhoLTIwLjY0Yy0zLjk5MDk0LDAgLTYuODgsMi44ODkwNiAtNi44OCw2Ljg4djI0LjA4aDE1OC4yNHYtMjQuMDhjMCwtMy45OTA5NCAtMi44ODkwNiwtNi44OCAtNi44OCwtNi44OGgtMjAuNjR2LTYuODhjMCwtMy43NjI1IC0zLjExNzUsLTYuODggLTYuODgsLTYuODhoLTYuODhjLTMuNzYyNSwwIC02Ljg4LDMuMTE3NSAtNi44OCw2Ljg4djYuODhoLTYxLjkydi02Ljg4YzAsLTMuNzYyNSAtMy4xMTc1LC02Ljg4IC02Ljg4LC02Ljg4ek00MS4yOCw2Ljg4aDYuODh2MjAuNjRoLTYuODh6TTEyMy44NCw2Ljg4aDYuODh2MjAuNjRoLTYuODh6TTYuODgsNTEuNnYxMDYuNjRjMCwzLjk5MDk0IDIuODg5MDYsNi44OCA2Ljg4LDYuODhoMTQ0LjQ4YzMuOTkwOTQsMCA2Ljg4LC0yLjg4OTA2IDYuODgsLTYuODh2LTEwNi42NHpNNDEuMjgsNzIuMjRoMTcuMnYxNy4yaC0xNy4yek02NS4zNiw3Mi4yNGgxNy4ydjE3LjJoLTE3LjJ6TTg5LjQ0LDcyLjI0aDE3LjJ2MTcuMmgtMTcuMnpNMTEzLjUyLDcyLjI0aDE3LjJ2MTcuMmgtMTcuMnpNNDEuMjgsOTYuMzJoMTcuMnYxNy4yaC0xNy4yek02NS4zNiw5Ni4zMmgxNy4ydjE3LjJoLTE3LjJ6TTg5LjQ0LDk2LjMyaDE3LjJ2MTcuMmgtMTcuMnpNMTEzLjUyLDk2LjMyaDE3LjJ2MTcuMmgtMTcuMnpNNDEuMjgsMTIwLjRoMTcuMnYxNy4yaC0xNy4yek02NS4zNiwxMjAuNGgxNy4ydjE3LjJoLTE3LjJ6TTg5LjQ0LDEyMC40aDE3LjJ2MTcuMmgtMTcuMnpNMTEzLjUyLDEyMC40aDE3LjJ2MTcuMmgtMTcuMnoiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==') calc(100% - 17px)  50% no-repeat
+  background-size: 16px 16px
+
+.invoice-form-textarea
+  width: 100%
+  height: 80px
+  padding: 20px
+  color: #73879C
+  border: 1px solid #dee2e6
+  background-color: transparent
+  border-radius: 3px
+  outline: none
+  resize: none
+
+  &:focus
+    border-color: rgba(60, 141, 188, .5)
+
+.close
+  position: absolute
+  top: 10px
+  right: 10px
+  width: 30px
+  height: 30px
+  background-color: transparent
+  border: 1px solid #dee2e6
+  border-radius: 100%
+  outline: none
+  cursor: pointer
+
+  &::before
+    content: '\00d7'
+    position: absolute
+    top: 50%
+    left: 50%
+    font-size: 30px
+    line-height: 30px
+    margin-top: -15px
+    margin-left: -8px
+    color: #dee2e6
